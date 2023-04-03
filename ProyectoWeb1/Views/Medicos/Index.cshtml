@@ -1,0 +1,29 @@
+﻿@model List<ProyectoWeb1.Models.Domain.Medico>
+@{
+}
+<h1>Medicos</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Ced</th>
+            <th>Correo</th>
+            <th>Pais</th>
+            <th>Provincia</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var Medico in Model)
+        {
+            <tr>
+                <td>@Medico.Id</td>
+                <td>@Medico.Nombre</td>
+                <td>@Medico.Ced</td>
+                <td>@Medico.Correo</td>
+                <td>@Medico.Provincia</td>
+                <td>@Medico.Pais</td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,62 @@
+﻿@model ProyectoWeb1.Models.AddInyeccionesViewModel
+@{
+}
+
+<h1>Paso 4: Registrar una nueva enfermadad</h1>
+<form method="post" action="Add" class="mt-5">
+    <div class="mb-3">
+        <label for="" class="form-label">Identificación</label>
+        <input type="text" class="form-control" asp-for="IDPaciente">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Vacuna Sarampion</label>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="" id="" value="S" asp-for="V_sarampion">
+            <label class="form-check-label" for="inlineRadio1">S</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="" id="" value="N" asp-for="V_sarampion">
+            <label class="form-check-label" for="inlineRadio2">N</label>
+        </div>
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Vacuna Influenza</label>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="" id="" value="S" asp-for="V_influenza">
+            <label class="form-check-label" for="inlineRadio1">S</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="" id="" value="N" asp-for="V_influenza">
+            <label class="form-check-label" for="inlineRadio2">N</label>
+        </div>
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Vacuna Covid</label>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="" id="" value="S" asp-for="V_covid">
+            <label class="form-check-label" for="inlineRadio1">S</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="" id="" value="N" asp-for="V_covid">
+            <label class="form-check-label" for="inlineRadio2">N</label>
+        </div>
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Dosis</label>
+
+        <select class="form-select" aria-label="Default select example" asp-for="Dosis">
+            <option selected>Elegir opción:</option>
+            <option value="S">1</option>
+            <option value="C">2</option>
+            <option value="V">3</option>
+            <option value="D">4</option>
+            <option value="L">Ninguna</option>
+        </select>
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Razon: En caso de no vacunarse con el COVID</label>
+        <input type="text-box" class="form-control" asp-for="Razon">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Siguiente</button>
+</form>

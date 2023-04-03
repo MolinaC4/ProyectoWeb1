@@ -1,0 +1,205 @@
+﻿@model ProyectoWeb1.Models.AddSintomasViewModel
+@{
+}
+
+<h1>Paso 5: Registrar una nueva enfermadad</h1>
+<form method="post" action="Add" class="mt-5">
+    <div class="mb-3">
+        <label for="" class="form-label">Identificación</label>
+        <input type="text" class="form-control" asp-for="IDPaciente">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Visita Medico</label>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="" id="" value="S" asp-for="VisitMedico">
+            <label class="form-check-label" for="inlineRadio1">S</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="" id="" value="N" asp-for="VisitMedico">
+            <label class="form-check-label" for="inlineRadio2">N</label>
+        </div>
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Visita Emergencias</label>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="" id="" value="S" asp-for="VisitEmergencia">
+            <label class="form-check-label" for="inlineRadio1">S</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="" id="" value="N" asp-for="VisitEmergencia">
+            <label class="form-check-label" for="inlineRadio2">N</label>
+        </div>
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Hospitalización</label>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="" id="" value="S" asp-for="Hospitalizacion">
+            <label class="form-check-label" for="inlineRadio1">S</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="" id="" value="N" asp-for="Hospitalizacion">
+            <label class="form-check-label" for="inlineRadio2">N</label>
+        </div>
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Hospitalizacion Prolongada</label>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="" id="" value="S" asp-for="HospitalizacionProlongada">
+            <label class="form-check-label" for="inlineRadio1">S</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="" id="" value="N" asp-for="HospitalizacionProlongada">
+            <label class="form-check-label" for="inlineRadio2">N</label>
+        </div>
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Enfermedad Vida o muerte</label>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="" id="" value="S" asp-for="EnfermedadPeligro">
+            <label class="form-check-label" for="inlineRadio1">S</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="" id="" value="N" asp-for="EnfermedadPeligro">
+            <label class="form-check-label" for="inlineRadio2">N</label>
+        </div>
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Incapacidad</label>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="" id="" value="S" asp-for="Incapacidad">
+            <label class="form-check-label" for="inlineRadio1">S</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="" id="" value="N" asp-for="Incapacidad">
+            <label class="form-check-label" for="inlineRadio2">N</label>
+        </div>
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Fallecido</label>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="" id="" value="S" asp-for="PacienteFallecido">
+            <label class="form-check-label" for="inlineRadio1">S</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="" id="" value="N" asp-for="PacienteFallecido">
+            <label class="form-check-label" for="inlineRadio2">N</label>
+        </div>
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Defecto de Nacimiento</label>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="" id="" value="S" asp-for="DefectoNac">
+            <label class="form-check-label" for="inlineRadio1">S</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="" id="" value="N" asp-for="DefectoNac">
+            <label class="form-check-label" for="inlineRadio2">N</label>
+        </div>
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Abortos</label>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="" id="" value="S" asp-for="Aborto">
+            <label class="form-check-label" for="inlineRadio1">S</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="" id="" value="N" asp-for="Aborto">
+            <label class="form-check-label" for="inlineRadio2">N</label>
+        </div>
+    </div>
+
+    <h2>Alergias:</h2>
+    <div class="mb-3">
+        <label for="" class="form-label">Medicamentos</label>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="" id="" value="S" asp-for="Alergia_medica">
+            <label class="form-check-label" for="inlineRadio1">S</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="" id="" value="N" asp-for="Alergia_medica">
+            <label class="form-check-label" for="inlineRadio2">N</label>
+        </div>
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Polietilenglicol</label>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="" id="" value="S" asp-for="Alergia_poli">
+            <label class="form-check-label" for="inlineRadio1">S</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="" id="" value="N" asp-for="Alergia_poli">
+            <label class="form-check-label" for="inlineRadio2">N</label>
+        </div>
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Alimentos</label>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="" id="" value="S" asp-for="Alergia_alimentos">
+            <label class="form-check-label" for="inlineRadio1">S</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="" id="" value="N" asp-for="Alergia_alimentos">
+            <label class="form-check-label" for="inlineRadio2">N</label>
+        </div>
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Medio Ambiente</label>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="" id="" value="S" asp-for="Alergia_medio_ambi">
+            <label class="form-check-label" for="inlineRadio1">S</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="" id="" value="N" asp-for="Alergia_medio_ambi">
+            <label class="form-check-label" for="inlineRadio2">N</label>
+        </div>
+    </div>
+    <h2>Enfermedades:</h2>
+    <div class="mb-3">
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1" asp-for="Enfermedades">
+            <label class="form-check-label" for="inlineCheckbox1">Enfermedad de Addison</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2" asp-for="Enfermedades">
+            <label class="form-check-label" for="inlineCheckbox2">Arritmias</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2" asp-for="Enfermedades">
+            <label class="form-check-label" for="inlineCheckbox2">Bronquitis</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2" asp-for="Enfermedades">
+            <label class="form-check-label" for="inlineCheckbox2">Cáncer</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2" asp-for="Enfermedades">
+            <label class="form-check-label" for="inlineCheckbox2">Diabetes</label>
+        </div>
+                <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2" asp-for="Enfermedades">
+            <label class="form-check-label" for="inlineCheckbox2">VIH</label>
+        </div>
+                <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2" asp-for="Enfermedades">
+            <label class="form-check-label" for="inlineCheckbox2">Hipertensión (presión arterial alta)</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2" asp-for="Enfermedades">
+            <label class="form-check-label" for="inlineCheckbox2">Lupus</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2" asp-for="Enfermedades">
+            <label class="form-check-label" for="inlineCheckbox2">Osteoartritis</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2" asp-for="Enfermedades">
+            <label class="form-check-label" for="inlineCheckbox2">Embolia pulmonar</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2" asp-for="Enfermedades">
+            <label class="form-check-label" for="inlineCheckbox2">Insuficiencia cardíaca congestiva</label>
+        </div>
+
+    </div>
+    <button type="submit" class="btn btn-primary">Siguiente</button>
+</form>

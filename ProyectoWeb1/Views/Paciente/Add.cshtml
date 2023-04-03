@@ -1,0 +1,72 @@
+﻿@model ProyectoWeb1.Models.AddPacienteViewModel
+@{
+}
+
+<h1>Paso 3: Registrar una nueva enfermadad</h1>
+<form method="post" action="Add" class="mt-5">
+    <div class="mb-3">
+        <label for="" class="form-label">Nombre</label>
+        <input type="text" class="form-control" asp-for="NombrePaciente">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Primer Apellido</label>
+        <input type="text" class="form-control" asp-for="Ape1">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Segundo Apellido</label>
+        <input type="text" class="form-control" asp-for="Ape2">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Identificación</label>
+        <input type="text" class="form-control" asp-for="Ced">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Fecha de Nacimiento</label>
+        <input type="date" class="form-control" asp-for="Fec_nac">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Genero</label>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="" id="" value="F" asp-for="Genero">
+            <label class="form-check-label" for="inlineRadio1">F</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="" id="" value="M" asp-for="Genero">
+            <label class="form-check-label" for="inlineRadio2">M</label>
+        </div>
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Estado Civil</label>
+
+        <select class="form-select" aria-label="Default select example" asp-for="Estado_Civil">
+            <option selected>Elegir opción:</option>
+            <option value="S">Soltero</option>
+            <option value="C">Casado</option>
+            <option value="V">Viudo</option>
+            <option value="D">Divorciado</option>
+            <option value="L">Unión Libre</option>
+        </select>
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Telefono de Contacto</label>
+        <input type="text" class="form-control" asp-for="Tel_contacto">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">País</label>
+        <input type="text" class="form-control" asp-for="Pais">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Provincia</label>
+        <input type="text" class="form-control" asp-for="Provincia">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Fecha Registro</label>
+        <input type="date" class="form-control" asp-for="Fec_registro">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Ocupacion</label>
+        <input type="text" class="form-control" asp-for="Ocupacion">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Siguiente</button>
+</form>

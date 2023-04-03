@@ -1,0 +1,28 @@
+﻿@model ProyectoWeb1.Models.AddMedicoViewModel
+@{
+}
+
+<h1>Paso 1: Registrar una nueva enfermadad</h1>
+<form method="post" action="Add" class="mt-5">
+    <div class="mb-3">
+        <label for="" class="form-label">Nombre Completo</label>
+        <input type="text" class="form-control" asp-for="Nombre" >
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Identificación</label>
+        <input type="text" class="form-control" asp-for="Ced">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Correo Electrónico</label>
+        <input type="email" class="form-control" asp-for="Correo">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">País</label>
+        <input type="text" class="form-control" asp-for="Pais">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Provincia</label>
+        <input type="text" class="form-control" asp-for="Provincia">
+    </div>
+    <button type="submit" class="btn btn-primary">Siguiente</button>
+</form>
